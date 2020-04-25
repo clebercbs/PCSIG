@@ -228,7 +228,7 @@ while True:
             arq = open('/home/cleber/Defesa/visaoSincronizada.txt', 'r')
             texto = arq.readlines()
             arq.close()
-            result = round(len(texto)/((total_pelotoes*(total_pelotoes-1))*qtd),4) 
+            result = round(len(texto)/((total_pelotoes*(total_pelotoes-1))*(int(qtd))),4) 
             print 'Sincronizações unidirecionais com o líder ', idLider, result*100, '%'
             lista1 = [str(float(lista)) for lista in range(1,101)]
             for l0 in lista1:
@@ -240,7 +240,7 @@ while True:
                 num = len(lista3)
                 lista4.append(num)
             soma = sum(lista4)
-            result2 = round(soma/((total_pelotoes*(total_pelotoes-1))*qtd),4) 
+            result2 = round(soma/((total_pelotoes*(total_pelotoes-1))*(int(qtd))),4) 
             print 'Sincronizações bidirecionais com o líder ', idLider, result2*100, '%'
            
            ############################################# Análise das colisões #############################################
